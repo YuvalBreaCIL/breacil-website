@@ -35,25 +35,6 @@ size_options: &size_options
   - { label: "64px", value: "64" }
 
 collections:
-  - name: "settings"
-    label: "Site Appearance"
-    files:
-      - file: "src/content/settings.json"
-        label: "Font & Text Size"
-        name: "settings"
-        fields:
-        - label: "Font"
-          name: "fontFamily"
-          widget: "select"
-          options: *font_options
-        - label: "Text Size"
-          name: "fontSize"
-          widget: "select"
-          options:
-            - { label: "Small", value: "small" }
-            - { label: "Medium (Default)", value: "medium" }
-            - { label: "Large", value: "large" }
-
   - name: "home"
     label: "Home Page"
     files:
