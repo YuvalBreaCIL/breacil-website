@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import researchContent from "@/content/research.json";
+import { textBoxStyle } from "@/lib/textBox";
 
 const areas = researchContent.areas;
 
@@ -68,7 +69,7 @@ const Research = () => {
           <div className="grid md:grid-cols-2 gap-px bg-border rounded-xl overflow-hidden border border-border">
             {areas.map((area, i) => (
               <motion.div
-                key={area.title}
+                key={area.title.value}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -80,9 +81,11 @@ const Research = () => {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="font-heading text-xl font-semibold mb-3">{area.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed text-sm">
-                      {area.description}
+                    <h3 className="font-heading text-xl font-semibold mb-3" style={textBoxStyle(area.title)}>
+                      {area.title.value}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm" style={textBoxStyle(area.description)}>
+                      {area.description.value}
                     </p>
                   </div>
                 </div>

@@ -7,9 +7,10 @@ import mohLogo from "@/assets/moh-logo.png";
 import shebaLogo from "@/assets/sheba-logo.png";
 import icrfLogo from "@/assets/icrf-logo.png";
 import partnersContent from "@/content/partners.json";
+import { textBoxStyle } from "@/lib/textBox";
 
 const partners = partnersContent.partners;
-const students = partnersContent.students.map((s) => s.name);
+const students = partnersContent.students;
 
 const Partners = () => {
   return (
@@ -29,8 +30,8 @@ const Partners = () => {
                 Featured Spinoff
               </span>
               <h2 className="mt-3 section-title !text-3xl md:!text-4xl">Pink Star</h2>
-              <p className="mt-5 text-foreground/75 leading-relaxed">
-                {partnersContent.spinoffDescription}
+              <p className="mt-5 text-foreground/75 leading-relaxed" style={textBoxStyle(partnersContent.spinoffDescription)}>
+                {partnersContent.spinoffDescription.value}
               </p>
               <a
                 href="https://www.pinkstar.life/"
@@ -79,9 +80,13 @@ const Partners = () => {
             <h2 className="mt-3 font-heading text-3xl font-semibold">Clinical & research partners</h2>
             <ul className="mt-8 divide-y divide-border border-y border-border">
               {partners.map((p) => (
-                <li key={p.name} className="py-5">
-                  <p className="font-heading font-semibold text-foreground">{p.name}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{p.role}</p>
+                <li key={p.name.value} className="py-5">
+                  <p className="font-heading font-semibold text-foreground" style={textBoxStyle(p.name)}>
+                    {p.name.value}
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-1" style={textBoxStyle(p.role)}>
+                    {p.role.value}
+                  </p>
                 </li>
               ))}
             </ul>
@@ -94,10 +99,11 @@ const Partners = () => {
             <ul className="mt-8 grid sm:grid-cols-2 gap-2">
               {students.map((s) => (
                 <li
-                  key={s}
+                  key={s.name.value}
                   className="bg-card border border-border rounded-md px-4 py-3 text-sm text-foreground/80 font-body"
+                  style={textBoxStyle(s.name)}
                 >
-                  {s}
+                  {s.name.value}
                 </li>
               ))}
             </ul>

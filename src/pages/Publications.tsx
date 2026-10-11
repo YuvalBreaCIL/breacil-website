@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import publicationsContent from "@/content/publications.json";
+import { textBoxStyle, type TextBox } from "@/lib/textBox";
 
 interface Publication {
-  title: string;
-  authors: string;
-  journal: string;
+  title: TextBox;
+  authors: TextBox;
+  journal: TextBox;
   year: number;
-  category: string;
+  category: TextBox;
   doi?: string;
   pmid?: string;
 }
@@ -28,7 +29,7 @@ const Publications = () => {
           <div className="divide-y divide-border">
             {publications.map((pub, i) => (
               <motion.article
-                key={pub.title}
+                key={pub.title.value}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -41,7 +42,10 @@ const Publications = () => {
                   </span>
                 </div>
                 <div className="lg:col-span-10">
-                  <h3 className="font-heading text-lg font-semibold leading-snug group-hover:text-accent transition-colors">
+                  <h3
+                    className="font-heading text-lg font-semibold leading-snug group-hover:text-accent transition-colors"
+                    style={textBoxStyle(pub.title)}
+                  >
                     {pub.doi ? (
                       <a
                         href={pub.doi}
@@ -49,18 +53,24 @@ const Publications = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-start gap-1.5"
                       >
-                        {pub.title}
+                        {pub.title.value}
                         <ExternalLink className="h-3.5 w-3.5 mt-1.5 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
                       </a>
                     ) : (
-                      pub.title
+                      pub.title.value
                     )}
                   </h3>
-                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                    {pub.authors}
+                  <p
+                    className="text-sm text-muted-foreground mt-2 leading-relaxed"
+                    style={textBoxStyle(pub.authors)}
+                  >
+                    {pub.authors.value}
                   </p>
-                  <p className="text-sm font-heading font-semibold text-foreground/80 mt-2 italic">
-                    {pub.journal}
+                  <p
+                    className="text-sm font-heading font-semibold text-foreground/80 mt-2 italic"
+                    style={textBoxStyle(pub.journal)}
+                  >
+                    {pub.journal.value}
                   </p>
                 </div>
               </motion.article>

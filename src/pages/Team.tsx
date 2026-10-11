@@ -4,12 +4,13 @@ import { Linkedin, ArrowUpRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import PageHeader from "@/components/PageHeader";
 import teamContent from "@/content/team.json";
+import { textBoxStyle, type TextBox } from "@/lib/textBox";
 
 interface Member {
-  name: string;
-  role: string;
-  bio: string;
-  longBio: string;
+  name: TextBox;
+  role: TextBox;
+  bio: TextBox;
+  longBio: TextBox;
   photo?: string;
   linkedin?: string;
 }
@@ -33,7 +34,7 @@ const Team = () => {
             {members.map((member, i) => (
               <motion.button
                 type="button"
-                key={member.name}
+                key={member.name.value}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -44,9 +45,9 @@ const Team = () => {
                 <div className="flex items-start gap-4">
                   <div className="w-20 h-20 rounded-full bg-accent/10 text-accent flex items-center justify-center font-heading text-xl font-bold overflow-hidden shrink-0 ring-2 ring-background">
                     {member.photo ? (
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                      <img src={member.photo} alt={member.name.value} className="w-full h-full object-cover" />
                     ) : (
-                      member.name
+                      member.name.value
                         .split(" ")
                         .filter((n) => !n.includes(","))
                         .map((n) => n[0])
@@ -59,8 +60,8 @@ const Team = () => {
                   />
                 </div>
                 <div className="mt-5 flex items-center gap-2">
-                  <h3 className="font-heading text-base font-semibold leading-tight">
-                    {member.name}
+                  <h3 className="font-heading text-base font-semibold leading-tight" style={textBoxStyle(member.name)}>
+                    {member.name.value}
                   </h3>
                   {member.linkedin && (
                     <a
@@ -74,12 +75,18 @@ const Team = () => {
                     </a>
                   )}
                 </div>
-                <p className="text-xs font-heading font-semibold tracking-[0.15em] uppercase text-accent mt-2">
-                  {member.role}
+                <p
+                  className="text-xs font-heading font-semibold tracking-[0.15em] uppercase text-accent mt-2"
+                  style={textBoxStyle(member.role)}
+                >
+                  {member.role.value}
                 </p>
-                {member.bio && (
-                  <p className="text-muted-foreground mt-3 leading-relaxed text-sm line-clamp-4">
-                    {member.bio}
+                {member.bio.value && (
+                  <p
+                    className="text-muted-foreground mt-3 leading-relaxed text-sm line-clamp-4"
+                    style={textBoxStyle(member.bio)}
+                  >
+                    {member.bio.value}
                   </p>
                 )}
               </motion.button>
@@ -94,9 +101,9 @@ const Team = () => {
             <div className="flex items-center gap-5">
               <div className="w-20 h-20 rounded-full bg-accent/10 text-accent flex items-center justify-center font-heading text-2xl font-bold shrink-0 overflow-hidden">
                 {selected?.photo ? (
-                  <img src={selected.photo} alt={selected.name} className="w-full h-full object-cover" />
+                  <img src={selected.photo} alt={selected.name.value} className="w-full h-full object-cover" />
                 ) : (
-                  selected?.name
+                  selected?.name.value
                     .split(" ")
                     .filter((n) => !n.includes(","))
                     .map((n) => n[0])
@@ -105,7 +112,9 @@ const Team = () => {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <DialogTitle className="font-heading text-xl">{selected?.name}</DialogTitle>
+                  <DialogTitle className="font-heading text-xl" style={selected && textBoxStyle(selected.name)}>
+                    {selected?.name.value}
+                  </DialogTitle>
                   {selected?.linkedin && (
                     <a
                       href={selected.linkedin}
@@ -117,12 +126,17 @@ const Team = () => {
                     </a>
                   )}
                 </div>
-                <p className="text-accent text-sm font-heading font-medium mt-1">{selected?.role}</p>
+                <p
+                  className="text-accent text-sm font-heading font-medium mt-1"
+                  style={selected && textBoxStyle(selected.role)}
+                >
+                  {selected?.role.value}
+                </p>
               </div>
             </div>
           </DialogHeader>
-          <div className="text-muted-foreground leading-relaxed text-sm space-y-4">
-            {selected?.longBio.split("\n\n").map((paragraph, i) => {
+          <div className="text-muted-foreground leading-relaxed text-sm space-y-4" style={selected && textBoxStyle(selected.longBio)}>
+            {selected?.longBio.value.split("\n\n").map((paragraph, i) => {
               const boldMatch = paragraph.match(/^\*\*(.+)\*\*$/);
               if (boldMatch) {
                 return (

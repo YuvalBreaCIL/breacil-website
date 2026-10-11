@@ -1,26 +1,96 @@
 {
-  "spinoffDescription": "Pinkstar is a Sheba ARC spinoff company from BREACIL, focused on early detection of breast cancer through breast MRI.",
+  "spinoffDescription": {
+    "value": "Pinkstar is a Sheba ARC spinoff company from BREACIL, focused on early detection of breast cancer through breast MRI.",
+    "font": "",
+    "size": ""
+  },
   "partners": [
     {
-      "name": "Orit Kaidar-Person, MD, PhD",
-      "role": "Head of Breast Radiotherapy, Sheba Medical Center"
+      "name": {
+        "value": "Orit Kaidar-Person, MD, PhD",
+        "font": "",
+        "size": ""
+      },
+      "role": {
+        "value": "Head of Breast Radiotherapy, Sheba Medical Center",
+        "font": "",
+        "size": ""
+      }
     },
     {
-      "name": "Maria Raitses-Gurevich, PhD",
-      "role": "Research Head of Comprehensive Pancreatic Cancer Program"
+      "name": {
+        "value": "Maria Raitses-Gurevich, PhD",
+        "font": "",
+        "size": ""
+      },
+      "role": {
+        "value": "Research Head of Comprehensive Pancreatic Cancer Program",
+        "font": "",
+        "size": ""
+      }
     },
     {
-      "name": "Maya Dadiani, PhD",
-      "role": "Senior Researcher, Breast Cancer Translational Research lab"
+      "name": {
+        "value": "Maya Dadiani, PhD",
+        "font": "",
+        "size": ""
+      },
+      "role": {
+        "value": "Senior Researcher, Breast Cancer Translational Research lab",
+        "font": "",
+        "size": ""
+      }
     }
   ],
   "students": [
-    { "name": "Guy Bar-Chen" },
-    { "name": "Ido Benifla" },
-    { "name": "Hila Bufman, MD" },
-    { "name": "Tikva Moravia" },
-    { "name": "Noam Namir De-Levi" },
-    { "name": "Yael Tur" },
-    { "name": "Eden Tal" }
+    {
+      "name": {
+        "value": "Guy Bar-Chen",
+        "font": "",
+        "size": ""
+      }
+    },
+    {
+      "name": {
+        "value": "Ido Benifla",
+        "font": "",
+        "size": ""
+      }
+    },
+    {
+      "name": {
+        "value": "Hila Bufman, MD",
+        "font": "",
+        "size": ""
+      }
+    },
+    {
+      "name": {
+        "value": "Tikva Moravia",
+        "font": "",
+        "size": ""
+      }
+    },
+    {
+      "name": {
+        "value": "Noam Namir De-Levi",
+        "font": "",
+        "size": ""
+      }
+    },
+    {
+      "name": {
+        "value": "Yael Tur",
+        "font": "",
+        "size": ""
+      }
+    },
+    {
+      "name": {
+        "value": "Eden Tal",
+        "font": "",
+        "size": ""
+      }
+    }
   ]
 }

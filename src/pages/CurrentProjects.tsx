@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import PageHeader from "@/components/PageHeader";
 import projectsContent from "@/content/projects.json";
+import { textBoxStyle, type TextBox } from "@/lib/textBox";
 
 interface Project {
-  title: string;
-  description: string;
+  title: TextBox;
+  description: TextBox;
 }
 
 const projects: Project[] = projectsContent.items;
@@ -23,7 +24,7 @@ const CurrentProjects = () => {
           <div className="divide-y divide-border">
             {projects.map((project, i) => (
               <motion.article
-                key={project.title}
+                key={project.title.value}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -35,12 +36,18 @@ const CurrentProjects = () => {
                     {String(i + 1).padStart(2, "0")}
                   </div>
                   <div>
-                    <h3 className="font-heading text-2xl lg:text-3xl font-medium tracking-tight leading-tight text-foreground">
-                      {project.title}
+                    <h3
+                      className="font-heading text-2xl lg:text-3xl font-medium tracking-tight leading-tight text-foreground"
+                      style={textBoxStyle(project.title)}
+                    >
+                      {project.title.value}
                     </h3>
                     <div className="mt-5 h-px w-12 bg-accent/40 group-hover:w-20 transition-all duration-500" />
-                    <p className="mt-6 text-muted-foreground leading-relaxed text-base max-w-2xl">
-                      {project.description}
+                    <p
+                      className="mt-6 text-muted-foreground leading-relaxed text-base max-w-2xl"
+                      style={textBoxStyle(project.description)}
+                    >
+                      {project.description.value}
                     </p>
                   </div>
                 </div>

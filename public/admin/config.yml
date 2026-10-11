@@ -9,6 +9,31 @@ publish_mode: simple
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
+font_options: &font_options
+  - { label: "Default", value: "" }
+  - { label: "Barlow Semi Condensed", value: "'Barlow Semi Condensed', sans-serif" }
+  - { label: "Inter", value: "'Inter', sans-serif" }
+  - { label: "Roboto", value: "'Roboto', sans-serif" }
+  - { label: "Lato", value: "'Lato', sans-serif" }
+  - { label: "Merriweather (Serif)", value: "'Merriweather', serif" }
+  - { label: "System Default", value: "system-ui, sans-serif" }
+
+size_options: &size_options
+  - { label: "Default", value: "" }
+  - { label: "12px", value: "12" }
+  - { label: "14px", value: "14" }
+  - { label: "16px", value: "16" }
+  - { label: "18px", value: "18" }
+  - { label: "20px", value: "20" }
+  - { label: "24px", value: "24" }
+  - { label: "28px", value: "28" }
+  - { label: "32px", value: "32" }
+  - { label: "36px", value: "36" }
+  - { label: "40px", value: "40" }
+  - { label: "48px", value: "48" }
+  - { label: "56px", value: "56" }
+  - { label: "64px", value: "64" }
+
 collections:
   - name: "settings"
     label: "Site Appearance"
@@ -17,23 +42,17 @@ collections:
         label: "Font & Text Size"
         name: "settings"
         fields:
-          - label: "Font"
-            name: "fontFamily"
-            widget: "select"
-            options:
-              - { label: "Barlow Semi Condensed (Default)", value: "'Barlow Semi Condensed', sans-serif" }
-              - { label: "Inter", value: "'Inter', sans-serif" }
-              - { label: "Roboto", value: "'Roboto', sans-serif" }
-              - { label: "Lato", value: "'Lato', sans-serif" }
-              - { label: "Merriweather (Serif)", value: "'Merriweather', serif" }
-              - { label: "System Default", value: "system-ui, sans-serif" }
-          - label: "Text Size"
-            name: "fontSize"
-            widget: "select"
-            options:
-              - { label: "Small", value: "small" }
-              - { label: "Medium (Default)", value: "medium" }
-              - { label: "Large", value: "large" }
+        - label: "Font"
+          name: "fontFamily"
+          widget: "select"
+          options: *font_options
+        - label: "Text Size"
+          name: "fontSize"
+          widget: "select"
+          options:
+            - { label: "Small", value: "small" }
+            - { label: "Medium (Default)", value: "medium" }
+            - { label: "Large", value: "large" }
 
   - name: "home"
     label: "Home Page"
@@ -42,10 +61,42 @@ collections:
         label: "Home Page Content"
         name: "home"
         fields:
-          - { label: "Mission Heading", name: "missionHeading", widget: "string" }
-          - { label: "Mission Paragraph 1", name: "missionParagraph1", widget: "text" }
-          - { label: "Mission Paragraph 2", name: "missionParagraph2", widget: "text" }
-          - { label: "News Teaser Text", name: "newsTeaser", widget: "text" }
+        - label: "Mission Heading"
+          name: "missionHeading"
+          widget: "object"
+          collapsed: true
+          summary: "{{fields.value}}"
+          fields:
+            - { label: "Text", name: "value", widget: "string", required: false }
+            - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+            - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+        - label: "Mission Paragraph 1"
+          name: "missionParagraph1"
+          widget: "object"
+          collapsed: true
+          summary: "{{fields.value}}"
+          fields:
+            - { label: "Text", name: "value", widget: "text", required: false }
+            - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+            - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+        - label: "Mission Paragraph 2"
+          name: "missionParagraph2"
+          widget: "object"
+          collapsed: true
+          summary: "{{fields.value}}"
+          fields:
+            - { label: "Text", name: "value", widget: "text", required: false }
+            - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+            - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+        - label: "News Teaser Text"
+          name: "newsTeaser"
+          widget: "object"
+          collapsed: true
+          summary: "{{fields.value}}"
+          fields:
+            - { label: "Text", name: "value", widget: "text", required: false }
+            - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+            - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
 
   - name: "team"
     label: "Team Members"
@@ -54,22 +105,54 @@ collections:
         label: "Team Members"
         name: "team"
         fields:
-          - label: "Members"
-            name: "members"
-            widget: "list"
-            summary: "{{name}} — {{role}}"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Role", name: "role", widget: "string" }
-              - { label: "Short Bio (shown on card)", name: "bio", widget: "text", required: false }
-              - { label: "Full Bio (shown in popup)", name: "longBio", widget: "text" }
-              - label: "Photo"
-                name: "photo"
-                widget: "image"
-                required: false
-                media_folder: "/public/images/team"
-                public_folder: "/images/team"
-              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+        - label: "Members"
+          name: "members"
+          widget: "list"
+          summary: "{{fields.name.value}}"
+          fields:
+            - label: "Name"
+              name: "name"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Role"
+              name: "role"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Short Bio (shown on card)"
+              name: "bio"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "text", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Full Bio (shown in popup)"
+              name: "longBio"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "text", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Photo"
+              name: "photo"
+              widget: "image"
+              required: false
+              media_folder: "/public/images/team"
+              public_folder: "/images/team"
+            - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
 
   - name: "news"
     label: "News"
@@ -78,16 +161,48 @@ collections:
         label: "News Items"
         name: "news"
         fields:
-          - label: "Items"
-            name: "items"
-            widget: "list"
-            summary: "{{title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Summary", name: "summary", widget: "text" }
-              - { label: "Source", name: "source", widget: "string" }
-              - { label: "Date", name: "date", widget: "string" }
-              - { label: "Article URL", name: "url", widget: "string" }
+        - label: "Items"
+          name: "items"
+          widget: "list"
+          summary: "{{fields.title.value}}"
+          fields:
+            - label: "Title"
+              name: "title"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Summary"
+              name: "summary"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "text", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Source"
+              name: "source"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Date"
+              name: "date"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - { label: "Article URL", name: "url", widget: "string" }
 
   - name: "publications"
     label: "Publications"
@@ -96,17 +211,49 @@ collections:
         label: "Publications"
         name: "publications"
         fields:
-          - label: "Publications"
-            name: "items"
-            widget: "list"
-            summary: "{{year}} — {{title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Authors", name: "authors", widget: "text" }
-              - { label: "Journal", name: "journal", widget: "string" }
-              - { label: "Year", name: "year", widget: "number" }
-              - { label: "Category", name: "category", widget: "string" }
-              - { label: "DOI Link", name: "doi", widget: "string", required: false }
+        - label: "Publications"
+          name: "items"
+          widget: "list"
+          summary: "{{fields.year}} — {{fields.title.value}}"
+          fields:
+            - label: "Title"
+              name: "title"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Authors"
+              name: "authors"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "text", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Journal"
+              name: "journal"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - { label: "Year", name: "year", widget: "number" }
+            - label: "Category"
+              name: "category"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - { label: "DOI Link", name: "doi", widget: "string", required: false }
 
   - name: "projects"
     label: "Current Projects"
@@ -115,13 +262,29 @@ collections:
         label: "Current Projects"
         name: "projects"
         fields:
-          - label: "Projects"
-            name: "items"
-            widget: "list"
-            summary: "{{title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+        - label: "Projects"
+          name: "items"
+          widget: "list"
+          summary: "{{fields.title.value}}"
+          fields:
+            - label: "Title"
+              name: "title"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Description"
+              name: "description"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "text", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
 
   - name: "research"
     label: "Research Areas"
@@ -130,13 +293,29 @@ collections:
         label: "Research Areas"
         name: "research"
         fields:
-          - label: "Areas"
-            name: "areas"
-            widget: "list"
-            summary: "{{title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+        - label: "Areas"
+          name: "areas"
+          widget: "list"
+          summary: "{{fields.title.value}}"
+          fields:
+            - label: "Title"
+              name: "title"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Description"
+              name: "description"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "text", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
 
   - name: "partners"
     label: "Partners & Collaborators"
@@ -145,20 +324,52 @@ collections:
         label: "Partners & Collaborators"
         name: "partners"
         fields:
-          - { label: "Pink Star Description", name: "spinoffDescription", widget: "text" }
-          - label: "Partners"
-            name: "partners"
-            widget: "list"
-            summary: "{{name}}"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Role", name: "role", widget: "string" }
-          - label: "Students"
-            name: "students"
-            widget: "list"
-            summary: "{{name}}"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
+        - label: "Pink Star Description"
+          name: "spinoffDescription"
+          widget: "object"
+          collapsed: true
+          summary: "{{fields.value}}"
+          fields:
+            - { label: "Text", name: "value", widget: "text", required: false }
+            - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+            - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+        - label: "Partners"
+          name: "partners"
+          widget: "list"
+          summary: "{{fields.name.value}}"
+          fields:
+            - label: "Name"
+              name: "name"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+            - label: "Role"
+              name: "role"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+        - label: "Students"
+          name: "students"
+          widget: "list"
+          summary: "{{fields.name.value}}"
+          fields:
+            - label: "Name"
+              name: "name"
+              widget: "object"
+              collapsed: true
+              summary: "{{fields.value}}"
+              fields:
+                - { label: "Text", name: "value", widget: "string", required: false }
+                - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+                - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
 
   - name: "contact"
     label: "Contact Info"
@@ -167,5 +378,21 @@ collections:
         label: "Contact Info"
         name: "contact"
         fields:
-          - { label: "Address", name: "address", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
+        - label: "Address"
+          name: "address"
+          widget: "object"
+          collapsed: true
+          summary: "{{fields.value}}"
+          fields:
+            - { label: "Text", name: "value", widget: "text", required: false }
+            - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+            - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+        - label: "Email"
+          name: "email"
+          widget: "object"
+          collapsed: true
+          summary: "{{fields.value}}"
+          fields:
+            - { label: "Text", name: "value", widget: "string", required: false }
+            - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
+            - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }

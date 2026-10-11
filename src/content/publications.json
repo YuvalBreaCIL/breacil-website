@@ -1,139 +1,411 @@
 {
   "items": [
     {
-      "title": "Exploring pancreatic variability in BRCA carriers vs. Non-Carriers: A diffusion tensor MRI study",
-      "authors": "Raitses-Gurevich M, Tau N, Moss Massasa EE, Shahar S, Refaeli D, Mayer C, Apter S, Inbar Y, Degani H, Golan T, Anaby D",
-      "journal": "Eur J Radiol",
+      "title": {
+        "value": "Exploring pancreatic variability in BRCA carriers vs. Non-Carriers: A diffusion tensor MRI study",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Raitses-Gurevich M, Tau N, Moss Massasa EE, Shahar S, Refaeli D, Mayer C, Apter S, Inbar Y, Degani H, Golan T, Anaby D",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Eur J Radiol",
+        "font": "",
+        "size": ""
+      },
       "year": 2026,
-      "category": "Diffusion MRI",
+      "category": {
+        "value": "Diffusion MRI",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1016/j.ejrad.2025.112483"
     },
     {
-      "title": "Breast cancer outcomes after skin- and nipple-sparing mastectomy in BRCA pathogenic mutation carriers versus non-BRCA carriers",
-      "authors": "Moshe N, Haisraely O, Globus O, Faermann R, Abu-Shehada N, Anaby D, Gal Yam E, Balint Lahat N, Galper S, Menes T, Haik J, Sklair-Levy M, Oedegaard C, Kuehn T, Morrow M, Poortmans P, Bernstein-Molho R, Kaidar-Person O",
-      "journal": "Radiother Oncol",
+      "title": {
+        "value": "Breast cancer outcomes after skin- and nipple-sparing mastectomy in BRCA pathogenic mutation carriers versus non-BRCA carriers",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Moshe N, Haisraely O, Globus O, Faermann R, Abu-Shehada N, Anaby D, Gal Yam E, Balint Lahat N, Galper S, Menes T, Haik J, Sklair-Levy M, Oedegaard C, Kuehn T, Morrow M, Poortmans P, Bernstein-Molho R, Kaidar-Person O",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Radiother Oncol",
+        "font": "",
+        "size": ""
+      },
       "year": 2025,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1016/j.radonc.2025.110710"
     },
     {
-      "title": "Residual breast tissue after mastectomy and reconstruction: A substudy of the SECRET project",
-      "authors": "Kaidar-Person O, Sklair-Levy M, Anaby D, Bernstein-Molho R, van Maaren MC, de Munck L, de Ruysscher D, Offersen B, Poortmans P, Boersma LJ; SECRET group",
-      "journal": "Eur J Surg Oncol",
+      "title": {
+        "value": "Residual breast tissue after mastectomy and reconstruction: A substudy of the SECRET project",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Kaidar-Person O, Sklair-Levy M, Anaby D, Bernstein-Molho R, van Maaren MC, de Munck L, de Ruysscher D, Offersen B, Poortmans P, Boersma LJ; SECRET group",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Eur J Surg Oncol",
+        "font": "",
+        "size": ""
+      },
       "year": 2024,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1016/j.ejso.2024.108607"
     },
     {
-      "title": "A BRILLIANT-BRCA study: residual breast tissue after mastectomy and reconstruction",
-      "authors": "Kaidar-Person O, Faermann R, Polikar D, Cohen K, Bernstein-Molho R, Morrow M, Boersma LJ, Offersen BV, Poortmans P, Sklair-Levy M, Anaby D",
-      "journal": "Breast Cancer Res Treat",
+      "title": {
+        "value": "A BRILLIANT-BRCA study: residual breast tissue after mastectomy and reconstruction",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Kaidar-Person O, Faermann R, Polikar D, Cohen K, Bernstein-Molho R, Morrow M, Boersma LJ, Offersen BV, Poortmans P, Sklair-Levy M, Anaby D",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Breast Cancer Res Treat",
+        "font": "",
+        "size": ""
+      },
       "year": 2024,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1007/s10549-024-07425-4"
     },
     {
-      "title": "Relaxation-Diffusion T2-ADC Correlations in Breast Cancer Patients: A Spatiotemporally Encoded 3T MRI Assessment",
-      "authors": "Otikovs M, Nissan N, Furman-Haran E, Anaby D, Agassi R, Sklair-Levy M, Frydman L",
-      "journal": "Diagnostics (Basel)",
+      "title": {
+        "value": "Relaxation-Diffusion T2-ADC Correlations in Breast Cancer Patients: A Spatiotemporally Encoded 3T MRI Assessment",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Otikovs M, Nissan N, Furman-Haran E, Anaby D, Agassi R, Sklair-Levy M, Frydman L",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Diagnostics (Basel)",
+        "font": "",
+        "size": ""
+      },
       "year": 2023,
-      "category": "Diffusion MRI",
+      "category": {
+        "value": "Diffusion MRI",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.3390/diagnostics13233516"
     },
     {
-      "title": "Ultrafast DCE-MRI for discriminating pregnancy-associated breast cancer lesions from lactation related background parenchymal enhancement",
-      "authors": "Nissan N, Anaby D, Mahameed G, Bauer E, Moss Massasa EE, Menes T, Agassi R, Brodsky A, Grimm R, Nickel MD, Roccia E, Sklair-Levy M",
-      "journal": "Eur Radiol",
+      "title": {
+        "value": "Ultrafast DCE-MRI for discriminating pregnancy-associated breast cancer lesions from lactation related background parenchymal enhancement",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Nissan N, Anaby D, Mahameed G, Bauer E, Moss Massasa EE, Menes T, Agassi R, Brodsky A, Grimm R, Nickel MD, Roccia E, Sklair-Levy M",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Eur Radiol",
+        "font": "",
+        "size": ""
+      },
       "year": 2023,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1007/s00330-023-09805-8"
     },
     {
-      "title": "Prostate lesions characterization using diffusion-weighted spatiotemporal encoded MRI: Feasibility and initial assessment",
-      "authors": "Otikovs M, Portnoy O, Anaby D, Rosenzweig B, Nissan N, Frydman L",
-      "journal": "Magn Reson Med",
+      "title": {
+        "value": "Prostate lesions characterization using diffusion-weighted spatiotemporal encoded MRI: Feasibility and initial assessment",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Otikovs M, Portnoy O, Anaby D, Rosenzweig B, Nissan N, Frydman L",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Magn Reson Med",
+        "font": "",
+        "size": ""
+      },
       "year": 2023,
-      "category": "Diffusion MRI",
+      "category": {
+        "value": "Diffusion MRI",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1002/mrm.29641"
     },
     {
-      "title": "'Earlier than Early' Detection of Breast Cancer in Israeli BRCA Mutation Carriers Applying AI-Based Analysis to Consecutive MRI Scans",
-      "authors": "Anaby D, Shavin D, Zimmerman-Moreno G, Nissan N, Friedman E, Sklair-Levy M",
-      "journal": "Cancers (Basel)",
+      "title": {
+        "value": "'Earlier than Early' Detection of Breast Cancer in Israeli BRCA Mutation Carriers Applying AI-Based Analysis to Consecutive MRI Scans",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Anaby D, Shavin D, Zimmerman-Moreno G, Nissan N, Friedman E, Sklair-Levy M",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Cancers (Basel)",
+        "font": "",
+        "size": ""
+      },
       "year": 2023,
-      "category": "AI & Imaging",
+      "category": {
+        "value": "AI & Imaging",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.3390/cancers15123120"
     },
     {
-      "title": "Probing lipids relaxation times in breast cancer using magnetic resonance spectroscopic fingerprinting",
-      "authors": "Nissan N, Kulpanovich A, Agassi R, Allweis T, Haas I, Carmon E, Furman-Haran E, Anaby D, Sklair-Levy M, Tal A",
-      "journal": "Eur Radiol",
+      "title": {
+        "value": "Probing lipids relaxation times in breast cancer using magnetic resonance spectroscopic fingerprinting",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Nissan N, Kulpanovich A, Agassi R, Allweis T, Haas I, Carmon E, Furman-Haran E, Anaby D, Sklair-Levy M, Tal A",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Eur Radiol",
+        "font": "",
+        "size": ""
+      },
       "year": 2023,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1007/s00330-023-09560-w"
     },
     {
-      "title": "MRI can accurately diagnose breast cancer during lactation",
-      "authors": "Nissan N, Massasa EEM, Bauer E, Halshtok-Neiman O, Shalmon A, Gotlieb M, Faermann R, Samoocha D, Yagil Y, Ziv-Baran T, Anaby D, Sklair-Levy M",
-      "journal": "Eur Radiol",
+      "title": {
+        "value": "MRI can accurately diagnose breast cancer during lactation",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Nissan N, Massasa EEM, Bauer E, Halshtok-Neiman O, Shalmon A, Gotlieb M, Faermann R, Samoocha D, Yagil Y, Ziv-Baran T, Anaby D, Sklair-Levy M",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Eur Radiol",
+        "font": "",
+        "size": ""
+      },
       "year": 2023,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1007/s00330-022-09234-z"
     },
     {
-      "title": "Breast cancer imaging with glucosamine CEST (chemical exchange saturation transfer) MRI: first human experience",
-      "authors": "Rivlin M*, Anaby D*, Nissan N, Zaiss M, Deshmane A, Navon G, Sklair-Levy M",
-      "journal": "Eur Radiol",
+      "title": {
+        "value": "Breast cancer imaging with glucosamine CEST (chemical exchange saturation transfer) MRI: first human experience",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Rivlin M*, Anaby D*, Nissan N, Zaiss M, Deshmane A, Navon G, Sklair-Levy M",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Eur Radiol",
+        "font": "",
+        "size": ""
+      },
       "year": 2022,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1007/s00330-022-08772-w"
     },
     {
-      "title": "MRI of the Lactating Breast: Computer-Aided Diagnosis False Positive Rates and Background Parenchymal Enhancement Kinetic Features",
-      "authors": "Nissan N, Sorin V, Bauer E, Anaby D, Samoocha D, Yagil Y, Faermann R, Halshtok-Neiman O, Shalmon A, Gotlieb M, Sklair-Levy M",
-      "journal": "Acad Radiol",
+      "title": {
+        "value": "MRI of the Lactating Breast: Computer-Aided Diagnosis False Positive Rates and Background Parenchymal Enhancement Kinetic Features",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Nissan N, Sorin V, Bauer E, Anaby D, Samoocha D, Yagil Y, Faermann R, Halshtok-Neiman O, Shalmon A, Gotlieb M, Sklair-Levy M",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Acad Radiol",
+        "font": "",
+        "size": ""
+      },
       "year": 2022,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1016/j.acra.2021.11.003"
     },
     {
-      "title": "Background parenchymal enhancement and uptake as breast cancer imaging biomarkers: A state-of-the-art review",
-      "authors": "Bauer E, Levy MS, Domachevsky L, Anaby D, Nissan N",
-      "journal": "Clin Imaging",
+      "title": {
+        "value": "Background parenchymal enhancement and uptake as breast cancer imaging biomarkers: A state-of-the-art review",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Bauer E, Levy MS, Domachevsky L, Anaby D, Nissan N",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Clin Imaging",
+        "font": "",
+        "size": ""
+      },
       "year": 2022,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1016/j.clinimag.2021.11.021"
     },
     {
-      "title": "Neurite density of white matter significantly correlates with tuberous sclerosis complex disease severity",
-      "authors": "Anaby D, Shrot S, Belenky E, Ben-Zeev B, Tzadok M",
-      "journal": "Neuroimage Clin",
+      "title": {
+        "value": "Neurite density of white matter significantly correlates with tuberous sclerosis complex disease severity",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Anaby D, Shrot S, Belenky E, Ben-Zeev B, Tzadok M",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Neuroimage Clin",
+        "font": "",
+        "size": ""
+      },
       "year": 2022,
-      "category": "Diffusion MRI",
+      "category": {
+        "value": "Diffusion MRI",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1016/j.nicl.2022.103085"
     },
     {
-      "title": "Diffusivity in breast malignancies analyzed for b > 1000 s/mm² at 1 mm in-plane resolutions: Insight from Gaussian and non-Gaussian behaviors",
-      "authors": "Otikovs M, Nissan N, Furman-Haran E, Anaby D, Allweis TM, Agassi R, Sklair-Levy M, Frydman L",
-      "journal": "J Magn Reson Imaging",
+      "title": {
+        "value": "Diffusivity in breast malignancies analyzed for b > 1000 s/mm² at 1 mm in-plane resolutions: Insight from Gaussian and non-Gaussian behaviors",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Otikovs M, Nissan N, Furman-Haran E, Anaby D, Allweis TM, Agassi R, Sklair-Levy M, Frydman L",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "J Magn Reson Imaging",
+        "font": "",
+        "size": ""
+      },
       "year": 2021,
-      "category": "Diffusion MRI",
+      "category": {
+        "value": "Diffusion MRI",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1002/jmri.27489"
     },
     {
-      "title": "Breast MRI during lactation: effects on tumor conspicuity using dynamic contrast-enhanced (DCE) in comparison with diffusion tensor imaging (DTI) parametric maps",
-      "authors": "Nissan N, Allweis T, Menes T, Brodsky A, Paluch-Shimon S, Haas I, Golan O, Miller Y, Barlev H, Carmon E, Brodsky M, Anaby D, Lawson P, Halshtok-Neiman O, Shalmon A, Gotlieb M, Faermann R, Konen E, Sklair-Levy M",
-      "journal": "Eur Radiol",
+      "title": {
+        "value": "Breast MRI during lactation: effects on tumor conspicuity using dynamic contrast-enhanced (DCE) in comparison with diffusion tensor imaging (DTI) parametric maps",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Nissan N, Allweis T, Menes T, Brodsky A, Paluch-Shimon S, Haas I, Golan O, Miller Y, Barlev H, Carmon E, Brodsky M, Anaby D, Lawson P, Halshtok-Neiman O, Shalmon A, Gotlieb M, Faermann R, Konen E, Sklair-Levy M",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "Eur Radiol",
+        "font": "",
+        "size": ""
+      },
       "year": 2020,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1007/s00330-019-06435-x"
     },
     {
-      "title": "Breast MRI Without Contrast Is Feasible and Appropriate During Pregnancy",
-      "authors": "Nissan N, Anaby D, Sklair-Levy M",
-      "journal": "J Am Coll Radiol",
+      "title": {
+        "value": "Breast MRI Without Contrast Is Feasible and Appropriate During Pregnancy",
+        "font": "",
+        "size": ""
+      },
+      "authors": {
+        "value": "Nissan N, Anaby D, Sklair-Levy M",
+        "font": "",
+        "size": ""
+      },
+      "journal": {
+        "value": "J Am Coll Radiol",
+        "font": "",
+        "size": ""
+      },
       "year": 2019,
-      "category": "Breast Cancer",
+      "category": {
+        "value": "Breast Cancer",
+        "font": "",
+        "size": ""
+      },
       "doi": "https://doi.org/10.1016/j.jacr.2018.11.027"
     }
   ]

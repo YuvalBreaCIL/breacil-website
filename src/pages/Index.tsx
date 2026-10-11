@@ -6,6 +6,7 @@ import pinkFlower from "@/assets/pink-flower-new.png";
 import breastMriHero from "@/assets/breast-mri-hero.png";
 import homeContent from "@/content/home.json";
 import publicationsContent from "@/content/publications.json";
+import { textBoxStyle } from "@/lib/textBox";
 
 const exploreLinks = [
   { label: "Our research", to: "/research", icon: Microscope },
@@ -72,13 +73,20 @@ const Index = () => {
               <span className="text-base md:text-lg font-heading font-semibold tracking-[0.15em] uppercase text-accent">
                 Our Mission
               </span>
-              <h2 className="mt-3 section-title !text-3xl md:!text-4xl">
-                {homeContent.missionHeading}
+              <h2
+                className="mt-3 section-title !text-3xl md:!text-4xl"
+                style={textBoxStyle(homeContent.missionHeading)}
+              >
+                {homeContent.missionHeading.value}
               </h2>
               <img src={pinkFlower} alt="" className="h-4 w-auto opacity-50 mt-4" />
               <div className="mt-6 space-y-5 text-foreground/75 leading-relaxed font-body">
-                <p>{homeContent.missionParagraph1}</p>
-                <p>{homeContent.missionParagraph2}</p>
+                <p style={textBoxStyle(homeContent.missionParagraph1)}>
+                  {homeContent.missionParagraph1.value}
+                </p>
+                <p style={textBoxStyle(homeContent.missionParagraph2)}>
+                  {homeContent.missionParagraph2.value}
+                </p>
               </div>
             </motion.div>
 
@@ -129,12 +137,15 @@ const Index = () => {
               </div>
               <ul className="mt-5 divide-y divide-border">
                 {recentPublications.map((pub) => (
-                  <li key={pub.title} className="py-4 first:pt-0 last:pb-0">
-                    <h3 className="font-heading text-sm font-semibold leading-snug">
-                      {pub.title}
+                  <li key={pub.title.value} className="py-4 first:pt-0 last:pb-0">
+                    <h3
+                      className="font-heading text-sm font-semibold leading-snug"
+                      style={textBoxStyle(pub.title)}
+                    >
+                      {pub.title.value}
                     </h3>
                     <p className="text-xs text-muted-foreground mt-1.5">
-                      {pub.journal} · {pub.year}
+                      <span style={textBoxStyle(pub.journal)}>{pub.journal.value}</span> · {pub.year}
                     </p>
                   </li>
                 ))}
@@ -159,8 +170,11 @@ const Index = () => {
                   BREACIL News
                 </span>
               </div>
-              <p className="mt-4 text-sm text-foreground/75 leading-relaxed">
-                {homeContent.newsTeaser}
+              <p
+                className="mt-4 text-sm text-foreground/75 leading-relaxed"
+                style={textBoxStyle(homeContent.newsTeaser)}
+              >
+                {homeContent.newsTeaser.value}
               </p>
               <Link
                 to="/news"

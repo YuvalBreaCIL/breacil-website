@@ -1,4 +1,12 @@
 {
-  "address": "Derech Sheba 2, Ramat Gan, Israel",
-  "email": "mribreacil@gmail.com"
+  "address": {
+    "value": "Derech Sheba 2, Ramat Gan, Israel",
+    "font": "",
+    "size": ""
+  },
+  "email": {
+    "value": "mribreacil@gmail.com",
+    "font": "",
+    "size": ""
+  }
 }
