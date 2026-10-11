@@ -2,7 +2,7 @@ backend:
   name: github
   repo: YuvalBreaCIL/breacil-website
   branch: main
-  base_url: https://REPLACE_WITH_OAUTH_PROXY_URL
+  base_url: https://breacil-cms-auth.yuvalbreacil.workers.dev
   auth_endpoint: auth
 
 publish_mode: simple
