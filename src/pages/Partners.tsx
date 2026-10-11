@@ -8,6 +8,7 @@ import shebaLogo from "@/assets/sheba-logo.png";
 import icrfLogo from "@/assets/icrf-logo.png";
 import partnersContent from "@/content/partners.json";
 import { textBoxStyle } from "@/lib/textBox";
+import { imageBoxStyle } from "@/lib/imageBox";
 
 const partners = partnersContent.partners;
 const students = partnersContent.students;
@@ -48,7 +49,12 @@ const Partners = () => {
               viewport={{ once: true }}
               className="lg:col-span-7 bg-card border border-border rounded-xl p-12 flex items-center justify-center min-h-[280px]"
             >
-              <img src={pinkstarLogo} alt="Pink Star" className="h-32 w-auto" />
+              <img
+                src={pinkstarLogo}
+                alt="Pink Star"
+                className="h-32 w-auto"
+                style={imageBoxStyle(partnersContent.images.pinkstarLogo)}
+              />
             </motion.div>
           </div>
         </div>
@@ -58,14 +64,30 @@ const Partners = () => {
       <section className="bg-secondary border-y border-border py-16">
         <div className="section-container">
           <div className="flex flex-wrap items-center justify-center gap-16">
-            <img src={shebaLogo} alt="Sheba Tel HaShomer Medical Center" className="h-20 w-auto" />
+            <img
+              src={shebaLogo}
+              alt="Sheba Tel HaShomer Medical Center"
+              className="h-20 w-auto"
+              style={imageBoxStyle(partnersContent.images.shebaLogo)}
+            />
             <img
               src={arcLogo}
               alt="ARC Innovation at Sheba Medical Center"
               className="h-20 w-auto"
+              style={imageBoxStyle(partnersContent.images.arcLogo)}
             />
-            <img src={mohLogo} alt="Israel Ministry of Health" className="h-16 w-auto" />
-            <img src={icrfLogo} alt="Israel Cancer Research Fund" className="h-20 w-auto" />
+            <img
+              src={mohLogo}
+              alt="Israel Ministry of Health"
+              className="h-16 w-auto"
+              style={imageBoxStyle(partnersContent.images.mohLogo)}
+            />
+            <img
+              src={icrfLogo}
+              alt="Israel Cancer Research Fund"
+              className="h-20 w-auto"
+              style={imageBoxStyle(partnersContent.images.icrfLogo)}
+            />
           </div>
         </div>
       </section>

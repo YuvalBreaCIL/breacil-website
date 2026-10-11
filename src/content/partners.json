@@ -92,5 +92,47 @@
         "size": ""
       }
     }
-  ]
+  ],
+  "images": {
+    "pinkstarLogo": {
+      "width": "",
+      "height": "",
+      "marginTop": "",
+      "marginRight": "",
+      "marginBottom": "",
+      "marginLeft": ""
+    },
+    "shebaLogo": {
+      "width": "",
+      "height": "",
+      "marginTop": "",
+      "marginRight": "",
+      "marginBottom": "",
+      "marginLeft": ""
+    },
+    "arcLogo": {
+      "width": "",
+      "height": "",
+      "marginTop": "",
+      "marginRight": "",
+      "marginBottom": "",
+      "marginLeft": ""
+    },
+    "mohLogo": {
+      "width": "",
+      "height": "",
+      "marginTop": "",
+      "marginRight": "",
+      "marginBottom": "",
+      "marginLeft": ""
+    },
+    "icrfLogo": {
+      "width": "",
+      "height": "",
+      "marginTop": "",
+      "marginRight": "",
+      "marginBottom": "",
+      "marginLeft": ""
+    }
+  }
 }

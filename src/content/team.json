@@ -22,7 +22,15 @@
         "size": ""
       },
       "photo": "/images/team/debbie-anaby.png",
-      "linkedin": "https://www.linkedin.com/in/debbie-anaby/"
+      "linkedin": "https://www.linkedin.com/in/debbie-anaby/",
+      "photoBox": {
+        "width": "",
+        "height": "",
+        "marginTop": "",
+        "marginRight": "",
+        "marginBottom": "",
+        "marginLeft": ""
+      }
     },
     {
       "name": {
@@ -46,7 +54,15 @@
         "size": ""
       },
       "photo": "/images/team/miri-sklair-levi.png",
-      "linkedin": ""
+      "linkedin": "",
+      "photoBox": {
+        "width": "",
+        "height": "",
+        "marginTop": "",
+        "marginRight": "",
+        "marginBottom": "",
+        "marginLeft": ""
+      }
     },
     {
       "name": {
@@ -70,7 +86,15 @@
         "size": ""
       },
       "photo": "/images/team/kfir-cohen.jpeg",
-      "linkedin": "https://www.linkedin.com/in/kfir-cohen-03b085142/"
+      "linkedin": "https://www.linkedin.com/in/kfir-cohen-03b085142/",
+      "photoBox": {
+        "width": "",
+        "height": "",
+        "marginTop": "",
+        "marginRight": "",
+        "marginBottom": "",
+        "marginLeft": ""
+      }
     },
     {
       "name": {
@@ -94,7 +118,15 @@
         "size": ""
       },
       "photo": "/images/team/yuval-ben-simhon.jpeg",
-      "linkedin": "https://www.linkedin.com/in/yuval-ben-simhon/"
+      "linkedin": "https://www.linkedin.com/in/yuval-ben-simhon/",
+      "photoBox": {
+        "width": "",
+        "height": "",
+        "marginTop": "",
+        "marginRight": "",
+        "marginBottom": "",
+        "marginLeft": ""
+      }
     },
     {
       "name": {
@@ -118,7 +150,15 @@
         "size": ""
       },
       "photo": "/images/team/shachar-zachariah.png",
-      "linkedin": "https://www.linkedin.com/in/shahar-zachariah-levert-0a3534187"
+      "linkedin": "https://www.linkedin.com/in/shahar-zachariah-levert-0a3534187",
+      "photoBox": {
+        "width": "",
+        "height": "",
+        "marginTop": "",
+        "marginRight": "",
+        "marginBottom": "",
+        "marginLeft": ""
+      }
     },
     {
       "name": {
@@ -142,7 +182,15 @@
         "size": ""
       },
       "photo": "/images/team/gilad-yerushalmi.jpeg",
-      "linkedin": "https://www.linkedin.com/in/gilad-yerushalmi-8b7133175/"
+      "linkedin": "https://www.linkedin.com/in/gilad-yerushalmi-8b7133175/",
+      "photoBox": {
+        "width": "",
+        "height": "",
+        "marginTop": "",
+        "marginRight": "",
+        "marginBottom": "",
+        "marginLeft": ""
+      }
     },
     {
       "name": {
@@ -166,7 +214,15 @@
         "size": ""
       },
       "photo": "/images/team/amital-isaac.jpeg",
-      "linkedin": "https://www.linkedin.com/in/amitalisaac2027/"
+      "linkedin": "https://www.linkedin.com/in/amitalisaac2027/",
+      "photoBox": {
+        "width": "",
+        "height": "",
+        "marginTop": "",
+        "marginRight": "",
+        "marginBottom": "",
+        "marginLeft": ""
+      }
     }
   ]
 }

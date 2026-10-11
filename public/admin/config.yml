@@ -78,6 +78,30 @@ collections:
             - { label: "Text", name: "value", widget: "text", required: false }
             - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
             - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+        - label: "Hero Image (size & spacing)"
+          name: "heroImage"
+          widget: "object"
+          collapsed: true
+          summary: "size/position"
+          fields:
+            - { label: "Width (px, blank = default)", name: "width", widget: "number", value_type: "int", required: false }
+            - { label: "Height (px, blank = default)", name: "height", widget: "number", value_type: "int", required: false }
+            - { label: "Space above (px)", name: "marginTop", widget: "number", value_type: "int", required: false }
+            - { label: "Space right (px)", name: "marginRight", widget: "number", value_type: "int", required: false }
+            - { label: "Space below (px)", name: "marginBottom", widget: "number", value_type: "int", required: false }
+            - { label: "Space left (px)", name: "marginLeft", widget: "number", value_type: "int", required: false }
+        - label: "Mission Flower Image (size & spacing)"
+          name: "missionFlowerImage"
+          widget: "object"
+          collapsed: true
+          summary: "size/position"
+          fields:
+            - { label: "Width (px, blank = default)", name: "width", widget: "number", value_type: "int", required: false }
+            - { label: "Height (px, blank = default)", name: "height", widget: "number", value_type: "int", required: false }
+            - { label: "Space above (px)", name: "marginTop", widget: "number", value_type: "int", required: false }
+            - { label: "Space right (px)", name: "marginRight", widget: "number", value_type: "int", required: false }
+            - { label: "Space below (px)", name: "marginBottom", widget: "number", value_type: "int", required: false }
+            - { label: "Space left (px)", name: "marginLeft", widget: "number", value_type: "int", required: false }
 
   - name: "team"
     label: "Team Members"
@@ -133,6 +157,18 @@ collections:
               required: false
               media_folder: "/public/images/team"
               public_folder: "/images/team"
+            - label: "Photo size & position"
+              name: "photoBox"
+              widget: "object"
+              collapsed: true
+              summary: "size/position"
+              fields:
+                - { label: "Width (px, blank = default)", name: "width", widget: "number", value_type: "int", required: false }
+                - { label: "Height (px, blank = default)", name: "height", widget: "number", value_type: "int", required: false }
+                - { label: "Space above (px)", name: "marginTop", widget: "number", value_type: "int", required: false }
+                - { label: "Space right (px)", name: "marginRight", widget: "number", value_type: "int", required: false }
+                - { label: "Space below (px)", name: "marginBottom", widget: "number", value_type: "int", required: false }
+                - { label: "Space left (px)", name: "marginLeft", widget: "number", value_type: "int", required: false }
             - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
 
   - name: "news"
@@ -314,6 +350,71 @@ collections:
             - { label: "Text", name: "value", widget: "text", required: false }
             - { label: "Font", name: "font", widget: "select", options: *font_options, required: false }
             - { label: "Size (px)", name: "size", widget: "select", options: *size_options, required: false }
+        - label: "Logo Images (size & spacing)"
+          name: "images"
+          widget: "object"
+          collapsed: true
+          fields:
+            - label: "Pink Star Logo"
+              name: "pinkstarLogo"
+              widget: "object"
+              collapsed: true
+              summary: "size/position"
+              fields:
+                - { label: "Width (px, blank = default)", name: "width", widget: "number", value_type: "int", required: false }
+                - { label: "Height (px, blank = default)", name: "height", widget: "number", value_type: "int", required: false }
+                - { label: "Space above (px)", name: "marginTop", widget: "number", value_type: "int", required: false }
+                - { label: "Space right (px)", name: "marginRight", widget: "number", value_type: "int", required: false }
+                - { label: "Space below (px)", name: "marginBottom", widget: "number", value_type: "int", required: false }
+                - { label: "Space left (px)", name: "marginLeft", widget: "number", value_type: "int", required: false }
+            - label: "Sheba Logo"
+              name: "shebaLogo"
+              widget: "object"
+              collapsed: true
+              summary: "size/position"
+              fields:
+                - { label: "Width (px, blank = default)", name: "width", widget: "number", value_type: "int", required: false }
+                - { label: "Height (px, blank = default)", name: "height", widget: "number", value_type: "int", required: false }
+                - { label: "Space above (px)", name: "marginTop", widget: "number", value_type: "int", required: false }
+                - { label: "Space right (px)", name: "marginRight", widget: "number", value_type: "int", required: false }
+                - { label: "Space below (px)", name: "marginBottom", widget: "number", value_type: "int", required: false }
+                - { label: "Space left (px)", name: "marginLeft", widget: "number", value_type: "int", required: false }
+            - label: "ARC Logo"
+              name: "arcLogo"
+              widget: "object"
+              collapsed: true
+              summary: "size/position"
+              fields:
+                - { label: "Width (px, blank = default)", name: "width", widget: "number", value_type: "int", required: false }
+                - { label: "Height (px, blank = default)", name: "height", widget: "number", value_type: "int", required: false }
+                - { label: "Space above (px)", name: "marginTop", widget: "number", value_type: "int", required: false }
+                - { label: "Space right (px)", name: "marginRight", widget: "number", value_type: "int", required: false }
+                - { label: "Space below (px)", name: "marginBottom", widget: "number", value_type: "int", required: false }
+                - { label: "Space left (px)", name: "marginLeft", widget: "number", value_type: "int", required: false }
+            - label: "MOH Logo"
+              name: "mohLogo"
+              widget: "object"
+              collapsed: true
+              summary: "size/position"
+              fields:
+                - { label: "Width (px, blank = default)", name: "width", widget: "number", value_type: "int", required: false }
+                - { label: "Height (px, blank = default)", name: "height", widget: "number", value_type: "int", required: false }
+                - { label: "Space above (px)", name: "marginTop", widget: "number", value_type: "int", required: false }
+                - { label: "Space right (px)", name: "marginRight", widget: "number", value_type: "int", required: false }
+                - { label: "Space below (px)", name: "marginBottom", widget: "number", value_type: "int", required: false }
+                - { label: "Space left (px)", name: "marginLeft", widget: "number", value_type: "int", required: false }
+            - label: "ICRF Logo"
+              name: "icrfLogo"
+              widget: "object"
+              collapsed: true
+              summary: "size/position"
+              fields:
+                - { label: "Width (px, blank = default)", name: "width", widget: "number", value_type: "int", required: false }
+                - { label: "Height (px, blank = default)", name: "height", widget: "number", value_type: "int", required: false }
+                - { label: "Space above (px)", name: "marginTop", widget: "number", value_type: "int", required: false }
+                - { label: "Space right (px)", name: "marginRight", widget: "number", value_type: "int", required: false }
+                - { label: "Space below (px)", name: "marginBottom", widget: "number", value_type: "int", required: false }
+                - { label: "Space left (px)", name: "marginLeft", widget: "number", value_type: "int", required: false }
         - label: "Partners"
           name: "partners"
           widget: "list"
