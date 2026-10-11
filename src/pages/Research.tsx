@@ -2,39 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
+import researchContent from "@/content/research.json";
 
-const areas = [
-  {
-    title: "Early Detection in High-Risk Women",
-    description:
-      "Classification of very early breast abnormalities using breast MRI and clinical data from high-risk women.",
-  },
-  {
-    title: "Lesion Detection & Classification",
-    description:
-      "Detection and classification of breast lesions on MRI using advanced image processing techniques and artificial intelligence models.",
-  },
-  {
-    title: "Tissue Segmentation & Quantification",
-    description:
-      "Automatic segmentation and quantitative analysis of breast tissue, fibroglandular tissue (FGT), and residual breast tissue after mastectomy and silicone implant reconstruction.",
-  },
-  {
-    title: "Advanced BPE Characterization",
-    description:
-      "Quantification of BPE using unique image processing pipelines, to provide advanced BPE characteristics.",
-  },
-  {
-    title: "Imaging Biomarkers & AI Tools",
-    description:
-      "Development of quantitative imaging biomarkers and AI-driven tools for improving breast MRI interpretation, diagnostic accuracy, and personalized risk assessment.",
-  },
-  {
-    title: "Pancreatic Pathologies on MRI",
-    description:
-      "Detection and characterization of pancreatic pathologies on MRI using diffusion tensor imaging (DTI) and advanced image analysis methods.",
-  },
-];
+const areas = researchContent.areas;
 
 const Research = () => {
   return (

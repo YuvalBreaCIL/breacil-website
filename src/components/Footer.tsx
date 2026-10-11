@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import pinkFlower from "@/assets/pink-flower-new.png.asset.json";
+import pinkFlower from "@/assets/pink-flower-new.png";
 
 const Footer = () => {
   const { pathname } = useLocation();
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="section-container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <img src={pinkFlower.url} alt="" className="h-6 w-auto opacity-70" />
+            <img src={pinkFlower} alt="" className="h-6 w-auto opacity-70" />
             <div>
               <span className="font-heading text-lg font-bold text-foreground">BREACIL</span>
               <p className="text-sm text-muted-foreground mt-1">The Breast Cancer Imaging Laboratory at Sheba Medical Center</p>

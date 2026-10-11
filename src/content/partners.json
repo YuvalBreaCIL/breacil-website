@@ -1,0 +1,26 @@
+{
+  "spinoffDescription": "Pinkstar is a Sheba ARC spinoff company from BREACIL, focused on early detection of breast cancer through breast MRI.",
+  "partners": [
+    {
+      "name": "Orit Kaidar-Person, MD, PhD",
+      "role": "Head of Breast Radiotherapy, Sheba Medical Center"
+    },
+    {
+      "name": "Maria Raitses-Gurevich, PhD",
+      "role": "Research Head of Comprehensive Pancreatic Cancer Program"
+    },
+    {
+      "name": "Maya Dadiani, PhD",
+      "role": "Senior Researcher, Breast Cancer Translational Research lab"
+    }
+  ],
+  "students": [
+    { "name": "Guy Bar-Chen" },
+    { "name": "Ido Benifla" },
+    { "name": "Hila Bufman, MD" },
+    { "name": "Tikva Moravia" },
+    { "name": "Noam Namir De-Levi" },
+    { "name": "Yael Tur" },
+    { "name": "Eden Tal" }
+  ]
+}

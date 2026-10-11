@@ -1,17 +1,9 @@
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
+import newsContent from "@/content/news.json";
 
-const newsItems = [
-  {
-    title: "The end of missed diagnoses? How AI is detecting breast cancer cases that physicians overlook",
-    summary:
-      "\"The future of AI in medicine is only at its beginning. The digital revolution is no longer a futuristic dream—it is happening now,\" write Professor Miri Sklair-Levy and Dr. Debbie Anaby.",
-    source: "Calcalist Tech",
-    date: "October 9, 2024",
-    url: "https://www.calcalistech.com/ctechnews/article/bjuatjgyyg",
-  },
-];
+const newsItems = newsContent.items;
 
 const News = () => {
   return (

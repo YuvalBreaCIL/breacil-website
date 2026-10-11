@@ -3,13 +3,7 @@ import { motion } from "framer-motion";
 import { Linkedin, ArrowUpRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import PageHeader from "@/components/PageHeader";
-import debbiePhoto from "@/assets/debbie-anaby.png";
-import shacharPhoto from "@/assets/shachar-zachariah.png";
-import amitalPhoto from "@/assets/amital-isaac.jpeg";
-import kfirPhoto from "@/assets/kfir-cohen.jpeg";
-import miriPhoto from "@/assets/miri-sklair-levi.png";
-import yuvalPhoto from "@/assets/yuval-ben-simhon.jpeg";
-import giladPhoto from "@/assets/gilad-yerushalmi.jpeg.asset.json";
+import teamContent from "@/content/team.json";
 
 interface Member {
   name: string;
@@ -20,63 +14,7 @@ interface Member {
   linkedin?: string;
 }
 
-const members: Member[] = [
-  {
-    name: "Debbie Anaby, PhD",
-    role: "Principal Investigator",
-    bio: "Debbie Anaby is Head of the Breast Cancer Imaging Lab at Sheba Medical Center, where she leads research in advanced breast imaging, MRI analysis, and artificial intelligence for early breast cancer detection. Her work focuses on transforming breast MRI interpretation into a more objective and quantitative process, with the goal of increasing diagnostic accuracy and helping reduce unnecessary biopsies and imaging examinations. Her research combines clinical imaging expertise with innovative AI-driven technologies to advance personalized breast cancer screening and diagnosis.",
-    longBio: "Debbie Anaby is Head of the Breast Cancer Imaging Lab at Sheba Medical Center, where she leads research in advanced breast imaging, MRI analysis, and artificial intelligence for early breast cancer detection. Her work focuses on transforming breast MRI interpretation into a more objective and quantitative process, with the goal of increasing diagnostic accuracy and helping reduce unnecessary biopsies and imaging examinations. Her research combines clinical imaging expertise with innovative AI-driven technologies to advance personalized breast cancer screening and diagnosis.",
-    photo: debbiePhoto,
-    linkedin: "https://www.linkedin.com/in/debbie-anaby/",
-  },
-  {
-    name: "Prof. Miri Sklair-Levi, MD",
-    role: "Clinical Lead",
-    bio: "",
-    longBio: "Add detailed bio here.",
-    photo: miriPhoto,
-  },
-  {
-    name: "Kfir Cohen, M.Sc.",
-    role: "Researcher & Data Scientist",
-    bio: "Kfir is a Senior AI Researcher and Data Scientist at the BreaCIL Laboratory, Sheba Medical Center, where he focuses on applying data science and advanced computational methods to medical imaging.",
-    longBio: "Kfir is a Senior AI Researcher and Data Scientist at the BreaCIL Laboratory, Sheba Medical Center, where he focuses on applying data science and advanced computational methods to medical imaging. His work involves the development of innovative algorithms, machine learning models, and image analysis tools designed to extract meaningful insights from clinical data and support medical research. In addition to his technical expertise, Kfir contributes to the scientific community through academic writing, publishing research papers, and drafting grant proposals, effectively bridging the gap between algorithmic innovation and clinical application.",
-    photo: kfirPhoto,
-    linkedin: "https://www.linkedin.com/in/kfir-cohen-03b085142/",
-  },
-  {
-    name: "Yuval Ben Simhon-Zisk, B.Sc.",
-    role: "Research Programmer & Data Scientist",
-    bio: "Yuval holds a B.Sc. in Computer Science and Mathematics. She works on machine learning and medical imaging analysis at Breacil Lab, developing computational tools for analyzing medical data.",
-    longBio: "Yuval holds a B.Sc. in Computer Science and Mathematics. She works on machine learning and medical imaging analysis at Breacil Lab, developing computational tools for analyzing medical data. She is particularly interested in deep learning and data-driven approaches for improving medical research.",
-    photo: yuvalPhoto,
-    linkedin: "https://www.linkedin.com/in/yuval-ben-simhon/",
-  },
-  {
-    name: "Shahar Zachariah Levert, MA, PhD. Candidate",
-    role: "Research Programmer & Data Scientist",
-    bio: "Shahar is a PhD researcher at Tel Aviv University specializing in computational medical imaging, with a focus on developing machine learning methods for lesion detection and analysis.",
-    longBio: "Shahar Zachariah Levert is a PhD researcher at Tel Aviv University specializing in computational medical imaging, with a focus on developing machine learning methods for lesion detection and analysis. She has a strong background in medical image analysis and clinically driven research, with experience building and validating imaging pipelines on real-world clinical data, including applications in breast imaging and brain MRI.\n\nHer work focuses on translating advanced computational methods into tools that support clinical decision-making. In parallel, she leads the TAU Nucleate student community, promoting innovation and entrepreneurship in the life sciences. Outside of research, she enjoys traveling and exploring new places and cultures.",
-    photo: shacharPhoto,
-    linkedin: "https://www.linkedin.com/in/shahar-zachariah-levert-0a3534187",
-  },
-  {
-    name: "Gilad Yerushalmi, B.Sc.",
-    role: "Medical Imaging Research Engineer",
-    bio: "Gilad is a research engineer at the BreaciL laboratory at Sheba Medical Center. He specializes in applying machine learning and deep learning to the field of medical imaging. His work spans developing advanced algorithms to support research initiatives and building innovative applications that enable data-driven clinical decision-making. Beyond the lab, Gilad is an active individual with a passion for climbing, biking, running, and a particular fondness for Austrian novelists.",
-    longBio: "Gilad is a research engineer at the BreaciL laboratory at Sheba Medical Center. He specializes in applying machine learning and deep learning to the field of medical imaging. His work spans developing advanced algorithms to support research initiatives and building innovative applications that enable data-driven clinical decision-making. Beyond the lab, Gilad is an active individual with a passion for climbing, biking, running, and a particular fondness for Austrian novelists.",
-    photo: giladPhoto.url,
-    linkedin: "https://www.linkedin.com/in/gilad-yerushalmi-8b7133175/",
-  },
-  {
-    name: "Amital Isaac, MA, BA, BA",
-    role: "Clinical Research Associate",
-    bio: "Amital is a medical student in the Sheba-Nicosia program. She is pursuing a specialization in Gynecology, driven by a commitment to advancing women's health through both clinical practice and research.",
-    longBio: "Amital is a medical student in the Sheba-Nicosia program. She is pursuing a specialization in Gynecology, driven by a commitment to advancing women's health through both clinical practice and research. She maximizes her impact in medicine by blending a unique background in journalism and multimedia with her clinical knowledge — both in the lab and beyond. Her work reflects a patient-centered approach that bridges rigorous scientific inquiry with compelling communication. Outside of medicine, Amital is an avid outdoors enthusiast who finds inspiration in nature and loves to compete in triathlon.",
-    photo: amitalPhoto,
-    linkedin: "https://www.linkedin.com/in/amitalisaac2027/",
-  },
-];
+const members: Member[] = teamContent.members;
 
 const Team = () => {
   const [selected, setSelected] = useState<Member | null>(null);

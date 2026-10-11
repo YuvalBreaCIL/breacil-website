@@ -2,35 +2,14 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import pinkstarLogo from "@/assets/pinkstar-logo.png";
-import arcLogo from "@/assets/arc-logo.png.asset.json";
-import mohLogo from "@/assets/moh-logo.png.asset.json";
-import shebaLogo from "@/assets/sheba-logo.png.asset.json";
-import icrfLogo from "@/assets/icrf-logo.png.asset.json";
+import arcLogo from "@/assets/arc-logo.png";
+import mohLogo from "@/assets/moh-logo.png";
+import shebaLogo from "@/assets/sheba-logo.png";
+import icrfLogo from "@/assets/icrf-logo.png";
+import partnersContent from "@/content/partners.json";
 
-const partners = [
-  {
-    name: "Orit Kaidar-Person, MD, PhD",
-    role: "Head of Breast Radiotherapy, Sheba Medical Center",
-  },
-  {
-    name: "Maria Raitses-Gurevich, PhD",
-    role: "Research Head of Comprehensive Pancreatic Cancer Program",
-  },
-  {
-    name: "Maya Dadiani, PhD",
-    role: "Senior Researcher, Breast Cancer Translational Research lab",
-  },
-];
-
-const students = [
-  "Guy Bar-Chen",
-  "Ido Benifla",
-  "Hila Bufman, MD",
-  "Tikva Moravia",
-  "Noam Namir De-Levi",
-  "Yael Tur",
-  "Eden Tal",
-];
+const partners = partnersContent.partners;
+const students = partnersContent.students.map((s) => s.name);
 
 const Partners = () => {
   return (
@@ -51,8 +30,7 @@ const Partners = () => {
               </span>
               <h2 className="mt-3 section-title !text-3xl md:!text-4xl">Pink Star</h2>
               <p className="mt-5 text-foreground/75 leading-relaxed">
-                Pinkstar is a Sheba ARC spinoff company from BREACIL, focused on early detection of
-                breast cancer through breast MRI.
+                {partnersContent.spinoffDescription}
               </p>
               <a
                 href="https://www.pinkstar.life/"
@@ -79,14 +57,14 @@ const Partners = () => {
       <section className="bg-secondary border-y border-border py-16">
         <div className="section-container">
           <div className="flex flex-wrap items-center justify-center gap-16">
-            <img src={shebaLogo.url} alt="Sheba Tel HaShomer Medical Center" className="h-20 w-auto" />
+            <img src={shebaLogo} alt="Sheba Tel HaShomer Medical Center" className="h-20 w-auto" />
             <img
-              src={arcLogo.url}
+              src={arcLogo}
               alt="ARC Innovation at Sheba Medical Center"
               className="h-20 w-auto"
             />
-            <img src={mohLogo.url} alt="Israel Ministry of Health" className="h-16 w-auto" />
-            <img src={icrfLogo.url} alt="Israel Cancer Research Fund" className="h-20 w-auto" />
+            <img src={mohLogo} alt="Israel Ministry of Health" className="h-16 w-auto" />
+            <img src={icrfLogo} alt="Israel Cancer Research Fund" className="h-20 w-auto" />
           </div>
         </div>
       </section>

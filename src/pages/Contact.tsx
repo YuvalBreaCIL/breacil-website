@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import PageHeader from "@/components/PageHeader";
+import contactContent from "@/content/contact.json";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -45,7 +46,7 @@ const Contact = () => {
                     Location
                   </h3>
                   <p className="text-foreground mt-1.5 leading-relaxed">
-                    Derech Sheba 2, Ramat Gan, Israel
+                    {contactContent.address}
                   </p>
                 </div>
               </div>
@@ -58,10 +59,10 @@ const Contact = () => {
                     Email
                   </h3>
                   <a
-                    href="mailto:mribreacil@gmail.com"
+                    href={`mailto:${contactContent.email}`}
                     className="text-foreground mt-1.5 inline-block hover:text-accent transition-colors"
                   >
-                    mribreacil@gmail.com
+                    {contactContent.email}
                   </a>
                 </div>
               </div>

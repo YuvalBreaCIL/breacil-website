@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, BookOpen, Users, Microscope, Newspaper } from "lucide-react";
 
-import pinkFlower from "@/assets/pink-flower-new.png.asset.json";
+import pinkFlower from "@/assets/pink-flower-new.png";
 import breastMriHero from "@/assets/breast-mri-hero.png";
-import shebaLogo from "@/assets/sheba-logo.png.asset.json";
-import breacilLogo from "@/assets/breacil-logo.png";
+import homeContent from "@/content/home.json";
+import publicationsContent from "@/content/publications.json";
 
 const exploreLinks = [
   { label: "Our research", to: "/research", icon: Microscope },
@@ -13,23 +13,7 @@ const exploreLinks = [
   { label: "Who we are", to: "/team", icon: Users },
 ];
 
-const recentPublications = [
-  {
-    title: "Exploring pancreatic variability in BRCA carriers vs. Non-Carriers: A diffusion tensor MRI study",
-    journal: "Eur J Radiol",
-    year: 2026,
-  },
-  {
-    title: "Breast cancer outcomes after skin- and nipple-sparing mastectomy in BRCA mutation carriers",
-    journal: "Radiother Oncol",
-    year: 2025,
-  },
-  {
-    title: "A BRILLIANT-BRCA study: residual breast tissue after mastectomy and reconstruction",
-    journal: "Breast Cancer Res Treat",
-    year: 2024,
-  },
-];
+const recentPublications = publicationsContent.items.slice(0, 3);
 
 const Index = () => {
   return (
@@ -89,21 +73,12 @@ const Index = () => {
                 Our Mission
               </span>
               <h2 className="mt-3 section-title !text-3xl md:!text-4xl">
-                Image-guided, personalized breast screening.
+                {homeContent.missionHeading}
               </h2>
-              <img src={pinkFlower.url} alt="" className="h-4 w-auto opacity-50 mt-4" />
+              <img src={pinkFlower} alt="" className="h-4 w-auto opacity-50 mt-4" />
               <div className="mt-6 space-y-5 text-foreground/75 leading-relaxed font-body">
-                <p>
-                  The core focus of BREACIL lies in the personalization of breast screening strategies.
-                  We believe that decisions regarding screening pathways should be guided by objective
-                  features extracted from breast images, rather than relying solely on subjective
-                  evaluations from a radiologist's visual assessment.
-                </p>
-                <p>
-                  The resulting outcome is expected to be an earlier detection of breast cancer,
-                  minimization of false-positive biopsies, and an elevation of the standard of patient
-                  care and quality of life.
-                </p>
+                <p>{homeContent.missionParagraph1}</p>
+                <p>{homeContent.missionParagraph2}</p>
               </div>
             </motion.div>
 
@@ -185,7 +160,7 @@ const Index = () => {
                 </span>
               </div>
               <p className="mt-4 text-sm text-foreground/75 leading-relaxed">
-                Stay up to date with announcements, conference talks, and recent milestones from the lab.
+                {homeContent.newsTeaser}
               </p>
               <Link
                 to="/news"

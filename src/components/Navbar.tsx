@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import breacilLogo from "@/assets/breacil-logo.png";
-import shebaLogo from "@/assets/sheba-logo.png.asset.json";
+import shebaLogo from "@/assets/sheba-logo.png";
 
 const navItems = [
   { label: "HOME", path: "/" },
@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link to="/" className="flex-shrink-0 flex items-center gap-3">
           <img src={breacilLogo} alt="BREACIL - Breast Cancer Imaging Laboratory" className="h-10 w-auto" />
           <div className="h-8 w-px bg-border" />
-          <img src={shebaLogo.url} alt="Sheba Medical Center" className="h-10 w-auto" />
+          <img src={shebaLogo} alt="Sheba Medical Center" className="h-10 w-auto" />
         </Link>
 
 

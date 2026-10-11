@@ -1,0 +1,146 @@
+backend:
+  name: github
+  repo: YuvalBreaCIL/breacil-website
+  branch: main
+  base_url: https://REPLACE_WITH_OAUTH_PROXY_URL
+  auth_endpoint: auth
+
+publish_mode: simple
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "home"
+    label: "Home Page"
+    files:
+      - file: "src/content/home.json"
+        label: "Home Page Content"
+        name: "home"
+        fields:
+          - { label: "Mission Heading", name: "missionHeading", widget: "string" }
+          - { label: "Mission Paragraph 1", name: "missionParagraph1", widget: "text" }
+          - { label: "Mission Paragraph 2", name: "missionParagraph2", widget: "text" }
+          - { label: "News Teaser Text", name: "newsTeaser", widget: "text" }
+
+  - name: "team"
+    label: "Team Members"
+    files:
+      - file: "src/content/team.json"
+        label: "Team Members"
+        name: "team"
+        fields:
+          - label: "Members"
+            name: "members"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Short Bio (shown on card)", name: "bio", widget: "text", required: false }
+              - { label: "Full Bio (shown in popup)", name: "longBio", widget: "text" }
+              - label: "Photo"
+                name: "photo"
+                widget: "image"
+                required: false
+                media_folder: "/public/images/team"
+                public_folder: "/images/team"
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+
+  - name: "news"
+    label: "News"
+    files:
+      - file: "src/content/news.json"
+        label: "News Items"
+        name: "news"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Source", name: "source", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Article URL", name: "url", widget: "string" }
+
+  - name: "publications"
+    label: "Publications"
+    files:
+      - file: "src/content/publications.json"
+        label: "Publications"
+        name: "publications"
+        fields:
+          - label: "Publications"
+            name: "items"
+            widget: "list"
+            summary: "{{year}} — {{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Authors", name: "authors", widget: "text" }
+              - { label: "Journal", name: "journal", widget: "string" }
+              - { label: "Year", name: "year", widget: "number" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "DOI Link", name: "doi", widget: "string", required: false }
+
+  - name: "projects"
+    label: "Current Projects"
+    files:
+      - file: "src/content/projects.json"
+        label: "Current Projects"
+        name: "projects"
+        fields:
+          - label: "Projects"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "research"
+    label: "Research Areas"
+    files:
+      - file: "src/content/research.json"
+        label: "Research Areas"
+        name: "research"
+        fields:
+          - label: "Areas"
+            name: "areas"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "partners"
+    label: "Partners & Collaborators"
+    files:
+      - file: "src/content/partners.json"
+        label: "Partners & Collaborators"
+        name: "partners"
+        fields:
+          - { label: "Pink Star Description", name: "spinoffDescription", widget: "text" }
+          - label: "Partners"
+            name: "partners"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+          - label: "Students"
+            name: "students"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+
+  - name: "contact"
+    label: "Contact Info"
+    files:
+      - file: "src/content/contact.json"
+        label: "Contact Info"
+        name: "contact"
+        fields:
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
