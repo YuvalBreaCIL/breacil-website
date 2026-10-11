@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Bahnschrift', '"Bahnschrift Light"', '"Barlow Semi Condensed"', 'sans-serif'],
-        body: ['Bahnschrift', '"Bahnschrift Light"', '"Barlow Semi Condensed"', 'sans-serif'],
+        heading: ['var(--font-family-site)'],
+        body: ['var(--font-family-site)'],
       },
       colors: {
         border: "hsl(var(--border))",
