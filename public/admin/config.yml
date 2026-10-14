@@ -6,6 +6,8 @@ backend:
   auth_endpoint: auth
 
 publish_mode: simple
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 font_options: &font_options
   - { label: "Default", value: "" }
