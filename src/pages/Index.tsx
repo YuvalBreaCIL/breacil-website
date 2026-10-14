@@ -83,7 +83,7 @@ const Index = () => {
               <img
                 src={pinkFlower}
                 alt=""
-                className="h-4 w-auto opacity-70 mt-4"
+                className="h-6 w-auto opacity-70 mt-4"
                 style={imageBoxStyle(homeContent.missionFlowerImage)}
               />
               <div className="mt-6 space-y-5 text-foreground/75 leading-relaxed font-body">
