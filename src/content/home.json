@@ -18,21 +18,5 @@
     "value": "Stay up to date with announcements, conference talks, and recent milestones from the lab.",
     "font": "",
     "size": ""
-  },
-  "heroImage": {
-    "width": "",
-    "height": "",
-    "marginTop": "",
-    "marginRight": "",
-    "marginBottom": "",
-    "marginLeft": ""
-  },
-  "missionFlowerImage": {
-    "width": "32",
-    "height": "24",
-    "marginTop": "16",
-    "marginRight": "",
-    "marginBottom": "",
-    "marginLeft": ""
   }
 }

@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import PageHeader from "@/components/PageHeader";
 import teamContent from "@/content/team.json";
 import { textBoxStyle, type TextBox } from "@/lib/textBox";
-import { imageBoxStyle, type ImageBox } from "@/lib/imageBox";
 
 interface Member {
   name: TextBox;
@@ -13,7 +12,6 @@ interface Member {
   bio: TextBox;
   longBio: TextBox;
   photo?: string;
-  photoBox?: ImageBox;
   linkedin?: string;
 }
 
@@ -45,10 +43,7 @@ const Team = () => {
                 className="bg-card p-6 text-left hover:bg-secondary/60 transition-colors group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] border border-border rounded-xl"
               >
                 <div className="flex items-start gap-4">
-                  <div
-                    className="w-20 h-20 rounded-full bg-accent/10 text-accent flex items-center justify-center font-heading text-xl font-bold overflow-hidden shrink-0 ring-2 ring-background"
-                    style={imageBoxStyle(member.photoBox)}
-                  >
+                  <div className="w-20 h-20 rounded-full bg-accent/10 text-accent flex items-center justify-center font-heading text-xl font-bold overflow-hidden shrink-0 ring-2 ring-background">
                     {member.photo ? (
                       <img src={member.photo} alt={member.name.value} className="w-full h-full object-cover" />
                     ) : (
@@ -104,10 +99,7 @@ const Team = () => {
         <DialogContent className="sm:max-w-lg">
           <DialogHeader>
             <div className="flex items-center gap-5">
-              <div
-                className="w-20 h-20 rounded-full bg-accent/10 text-accent flex items-center justify-center font-heading text-2xl font-bold shrink-0 overflow-hidden"
-                style={selected && imageBoxStyle(selected.photoBox)}
-              >
+              <div className="w-20 h-20 rounded-full bg-accent/10 text-accent flex items-center justify-center font-heading text-2xl font-bold shrink-0 overflow-hidden">
                 {selected?.photo ? (
                   <img src={selected.photo} alt={selected.name.value} className="w-full h-full object-cover" />
                 ) : (

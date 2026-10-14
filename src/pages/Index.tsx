@@ -7,7 +7,6 @@ import breastMriHero from "@/assets/breast-mri-hero.png";
 import homeContent from "@/content/home.json";
 import publicationsContent from "@/content/publications.json";
 import { textBoxStyle } from "@/lib/textBox";
-import { imageBoxStyle } from "@/lib/imageBox";
 
 const exploreLinks = [
   { label: "Our research", to: "/research", icon: Microscope },
@@ -80,12 +79,7 @@ const Index = () => {
               >
                 {homeContent.missionHeading.value}
               </h2>
-              <img
-                src={pinkFlower}
-                alt=""
-                className="h-6 w-auto opacity-70 mt-4"
-                style={imageBoxStyle(homeContent.missionFlowerImage)}
-              />
+              <img src={pinkFlower} alt="" className="h-6 w-auto opacity-70 mt-4" />
               <div className="mt-6 space-y-5 text-foreground/75 leading-relaxed font-body">
                 <p style={textBoxStyle(homeContent.missionParagraph1)}>
                   {homeContent.missionParagraph1.value}
@@ -108,7 +102,6 @@ const Index = () => {
                 alt="Breast MRI scan used in BREACIL Lab research"
                 className="w-full h-auto object-cover"
                 loading="lazy"
-                style={imageBoxStyle(homeContent.heroImage)}
               />
             </motion.div>
 
