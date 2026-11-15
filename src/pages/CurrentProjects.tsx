@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 import PageHeader from "@/components/PageHeader";
 import projectsContent from "@/content/projects.json";
-import { textBoxStyle, type TextBox } from "@/lib/textBox";
+import { textBoxStyle, normalizeTextBox, type TextBox } from "@/lib/textBox";
 
 interface Project {
   title: TextBox;
   description: TextBox;
 }
 
-const projects: Project[] = projectsContent.items;
+const projects: Project[] = projectsContent.items.map((project) => ({
+  title: normalizeTextBox(project.title),
+  description: normalizeTextBox(project.description),
+}));
 
 const CurrentProjects = () => {
   return (

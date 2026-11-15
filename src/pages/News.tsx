@@ -2,9 +2,15 @@ import { motion } from "framer-motion";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import newsContent from "@/content/news.json";
-import { textBoxStyle } from "@/lib/textBox";
+import { textBoxStyle, normalizeTextBox } from "@/lib/textBox";
 
-const newsItems = newsContent.items;
+const newsItems = newsContent.items.map((item) => ({
+  ...item,
+  title: normalizeTextBox(item.title),
+  summary: normalizeTextBox(item.summary),
+  source: normalizeTextBox(item.source),
+  date: normalizeTextBox(item.date),
+}));
 
 const News = () => {
   return (

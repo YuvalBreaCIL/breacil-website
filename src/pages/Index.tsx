@@ -6,7 +6,7 @@ import pinkFlower from "@/assets/pink-flower-new.png";
 import breastMriHero from "@/assets/breast-mri-hero.png";
 import homeContent from "@/content/home.json";
 import publicationsContent from "@/content/publications.json";
-import { textBoxStyle } from "@/lib/textBox";
+import { textBoxStyle, normalizeTextBox } from "@/lib/textBox";
 
 const exploreLinks = [
   { label: "Our research", to: "/research", icon: Microscope },
@@ -14,7 +14,18 @@ const exploreLinks = [
   { label: "Who we are", to: "/team", icon: Users },
 ];
 
-const recentPublications = publicationsContent.items.slice(0, 3);
+const homeTextBoxes = {
+  missionHeading: normalizeTextBox(homeContent.missionHeading),
+  missionParagraph1: normalizeTextBox(homeContent.missionParagraph1),
+  missionParagraph2: normalizeTextBox(homeContent.missionParagraph2),
+  newsTeaser: normalizeTextBox(homeContent.newsTeaser),
+};
+
+const recentPublications = publicationsContent.items.slice(0, 3).map((pub) => ({
+  ...pub,
+  title: normalizeTextBox(pub.title),
+  journal: normalizeTextBox(pub.journal),
+}));
 
 const Index = () => {
   return (
@@ -75,17 +86,17 @@ const Index = () => {
               </span>
               <h2
                 className="mt-3 section-title !text-3xl md:!text-4xl"
-                style={textBoxStyle(homeContent.missionHeading)}
+                style={textBoxStyle(homeTextBoxes.missionHeading)}
               >
-                {homeContent.missionHeading.value}
+                {homeTextBoxes.missionHeading.value}
               </h2>
               <img src={pinkFlower} alt="" className="h-6 w-auto opacity-70 mt-4" />
               <div className="mt-6 space-y-5 text-foreground/75 leading-relaxed font-body">
-                <p style={textBoxStyle(homeContent.missionParagraph1)}>
-                  {homeContent.missionParagraph1.value}
+                <p style={textBoxStyle(homeTextBoxes.missionParagraph1)}>
+                  {homeTextBoxes.missionParagraph1.value}
                 </p>
-                <p style={textBoxStyle(homeContent.missionParagraph2)}>
-                  {homeContent.missionParagraph2.value}
+                <p style={textBoxStyle(homeTextBoxes.missionParagraph2)}>
+                  {homeTextBoxes.missionParagraph2.value}
                 </p>
               </div>
             </motion.div>
@@ -172,9 +183,9 @@ const Index = () => {
               </div>
               <p
                 className="mt-4 text-sm text-foreground/75 leading-relaxed"
-                style={textBoxStyle(homeContent.newsTeaser)}
+                style={textBoxStyle(homeTextBoxes.newsTeaser)}
               >
-                {homeContent.newsTeaser.value}
+                {homeTextBoxes.newsTeaser.value}
               </p>
               <Link
                 to="/news"

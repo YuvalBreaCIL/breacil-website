@@ -3,7 +3,12 @@ import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import PageHeader from "@/components/PageHeader";
 import contactContent from "@/content/contact.json";
-import { textBoxStyle } from "@/lib/textBox";
+import { textBoxStyle, normalizeTextBox } from "@/lib/textBox";
+
+const contactInfo = {
+  address: normalizeTextBox(contactContent.address),
+  email: normalizeTextBox(contactContent.email),
+};
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -46,8 +51,8 @@ const Contact = () => {
                   <h3 className="font-heading text-sm font-semibold tracking-wide uppercase text-foreground/70">
                     Location
                   </h3>
-                  <p className="text-foreground mt-1.5 leading-relaxed" style={textBoxStyle(contactContent.address)}>
-                    {contactContent.address.value}
+                  <p className="text-foreground mt-1.5 leading-relaxed" style={textBoxStyle(contactInfo.address)}>
+                    {contactInfo.address.value}
                   </p>
                 </div>
               </div>
@@ -60,11 +65,11 @@ const Contact = () => {
                     Email
                   </h3>
                   <a
-                    href={`mailto:${contactContent.email.value}`}
+                    href={`mailto:${contactInfo.email.value}`}
                     className="text-foreground mt-1.5 inline-block hover:text-accent transition-colors"
-                    style={textBoxStyle(contactContent.email)}
+                    style={textBoxStyle(contactInfo.email)}
                   >
-                    {contactContent.email.value}
+                    {contactInfo.email.value}
                   </a>
                 </div>
               </div>

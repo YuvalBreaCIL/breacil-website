@@ -7,10 +7,16 @@ import mohLogo from "@/assets/moh-logo.png";
 import shebaLogo from "@/assets/sheba-logo.png";
 import icrfLogo from "@/assets/icrf-logo.png";
 import partnersContent from "@/content/partners.json";
-import { textBoxStyle } from "@/lib/textBox";
+import { textBoxStyle, normalizeTextBox } from "@/lib/textBox";
 
-const partners = partnersContent.partners;
-const students = partnersContent.students;
+const spinoffDescription = normalizeTextBox(partnersContent.spinoffDescription);
+const partners = partnersContent.partners.map((p) => ({
+  name: normalizeTextBox(p.name),
+  role: normalizeTextBox(p.role),
+}));
+const students = partnersContent.students.map((s) => ({
+  name: normalizeTextBox(s.name),
+}));
 
 const Partners = () => {
   return (
@@ -30,8 +36,8 @@ const Partners = () => {
                 Featured Spinoff
               </span>
               <h2 className="mt-3 section-title !text-3xl md:!text-4xl">Pink Star</h2>
-              <p className="mt-5 text-foreground/75 leading-relaxed" style={textBoxStyle(partnersContent.spinoffDescription)}>
-                {partnersContent.spinoffDescription.value}
+              <p className="mt-5 text-foreground/75 leading-relaxed" style={textBoxStyle(spinoffDescription)}>
+                {spinoffDescription.value}
               </p>
               <a
                 href="https://www.pinkstar.life/"

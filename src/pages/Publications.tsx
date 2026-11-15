@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import publicationsContent from "@/content/publications.json";
-import { textBoxStyle, type TextBox } from "@/lib/textBox";
+import { textBoxStyle, normalizeTextBox, type TextBox } from "@/lib/textBox";
 
 interface Publication {
   title: TextBox;
@@ -14,7 +14,13 @@ interface Publication {
   pmid?: string;
 }
 
-const publications: Publication[] = publicationsContent.items;
+const publications: Publication[] = publicationsContent.items.map((pub) => ({
+  ...pub,
+  title: normalizeTextBox(pub.title),
+  authors: normalizeTextBox(pub.authors),
+  journal: normalizeTextBox(pub.journal),
+  category: normalizeTextBox(pub.category),
+}));
 
 const Publications = () => {
   return (

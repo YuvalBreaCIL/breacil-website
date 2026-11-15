@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import researchContent from "@/content/research.json";
-import { textBoxStyle } from "@/lib/textBox";
+import { textBoxStyle, normalizeTextBox } from "@/lib/textBox";
 
-const areas = researchContent.areas;
+const areas = researchContent.areas.map((area) => ({
+  title: normalizeTextBox(area.title),
+  description: normalizeTextBox(area.description),
+}));
 
 const Research = () => {
   return (

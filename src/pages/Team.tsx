@@ -4,7 +4,7 @@ import { Linkedin, ArrowUpRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import PageHeader from "@/components/PageHeader";
 import teamContent from "@/content/team.json";
-import { textBoxStyle, type TextBox } from "@/lib/textBox";
+import { textBoxStyle, normalizeTextBox, type TextBox } from "@/lib/textBox";
 
 interface Member {
   name: TextBox;
@@ -15,7 +15,13 @@ interface Member {
   linkedin?: string;
 }
 
-const members: Member[] = teamContent.members;
+const members: Member[] = teamContent.members.map((member) => ({
+  ...member,
+  name: normalizeTextBox(member.name),
+  role: normalizeTextBox(member.role),
+  bio: normalizeTextBox(member.bio),
+  longBio: normalizeTextBox(member.longBio),
+}));
 
 const Team = () => {
   const [selected, setSelected] = useState<Member | null>(null);
